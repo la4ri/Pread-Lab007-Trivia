@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ARTMUSIC QUIZ</title>
+  <link rel= "stylesheet" href="app.css">
+</head>
+<body>
+
+
+  <form id="formulario-trivia">
+    <label for="input-nome">Digite seu nome:</label>
+    <input type="text" name="nome" id="input-nome"/>
+
+    <h3>Questões</h3>
+    <h5 class="tema1">A musica infantil "se essa rua fosse minha" teve uma nova versão que surpreendeu as redes sociais, escrita pelo Costa Gold feat Kawe. A partir disso, a musica ficou:</h5>
+    <ul>
+      <li>
+        <label>
+          <input type="radio" name="resposta1" value="opcao1">
+          "Se essa lua, essa lua fosse minha, eu mandava, eu mandava ladrilhar"
+        </label>
+      </li>
+      <li>
+        <input type="radio" name="resposta1" value="opcao2">
+        "Se essa linda, essa linda fosse minha, eu mandava, eu mandava passear"
+      </li>
+      <li>
+        <input type="radio" name="resposta1" value="3">
+        "Se essa bunda, se essa bunda fosse minha eu levava pra casinha"
+      </li>
+    </ul>
+
+    <h5 class="tema1">O hit do momento "Galopa", que gerou uma grande repercursão de trends no TikTok foi composta por qual DJ?</h5>
+    <ul>
+      <li>
+        <label>
+          <input type="radio" name="resposta2" value="henriquedeferraz">
+          Henrique de Ferraz
+        </label>
+      </li>
+      <li>
+        <input type="radio" name="resposta2" value="Alok">
+        Alok
+      </li>
+      <li>
+        <input type="radio" name="resposta2" value="pedrosampaio">
+        Pedro Sampaio
+      </li>
+    </ul>
+
+    <button type="submit">Checar respostas</button>
+  </form>
+
+  <div id="mensagens">
+  </div>
+
+  <script>
+    const formulario = document.querySelector("#formulario-trivia");
+    const mensagens = document.querySelector("#mensagens");
+
+    formulario.addEventListener("submit", function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      mensagens.innerHTML = "Nome: " + formulario.elements.namedItem("nome").value + "<br>";
+      mensagens.innerHTML += "Resposta 1: " + formulario.elements.namedItem("resposta1").value + "<br>";
+      mensagens.innerHTML += "Resposta 2: " + formulario.elements.namedItem("resposta2").value + "<br>";
+    });
+  </script>
+</body>
+</html>
