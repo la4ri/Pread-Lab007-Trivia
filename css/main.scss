@@ -1,0 +1,27 @@
+$color-white: #FEEAFA;
+$color-grey: #8E9AAF;
+$color-grey2: #DEE2FF;
+$color-pink: #EFD3D7;
+$color-purple: #CBC0D3;
+
+@mixin teste($font_size, $color) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    font-size: $font_size;
+    color: $color;
+}
+
+@mixin barra() {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: $color-purple;
+    position: fixed;   
+    width: 100%;
+    height: 4.5%;
+}
+
+@import 'home';
+@import 'quizz';

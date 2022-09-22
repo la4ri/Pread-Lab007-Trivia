@@ -1,0 +1,37 @@
+*{
+    border:0;
+    margin:0;
+    padding:0;
+    font-family: monospace;
+}
+
+body{
+    width:100%;
+    height:100%;
+    font-size:1.5rem;
+    background-color: $color-grey;
+}
+
+.comeco {
+    @include barra();
+    top: 0;
+}
+
+.rodape{
+    @include barra ();
+    bottom: 0;
+}
+
+.container {
+   display: block;
+    background-color: aliceblue;
+    width: 90%;
+    height: 90%;
+    margin-top: 5%;
+    margin-left: 3%;
+}
+
+.enunciado {
+    margin-top: 3%;
+    font-size: 1.7em;
+}
